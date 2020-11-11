@@ -11,18 +11,15 @@
 #include <fstream>
 #include <string>
 #include <algorithm>
-using namespace std;
-
 #include <libnetfilter_queue/libnetfilter_queue.h>
+
+using namespace std;
 
 #define TRUE 1
 #define FALSE 0 
 
-char invalid_host[50];
-
 set<string> siteset;
 int netfilter_flag;
-
 
 void usage() {
         printf("syntax : 1m-block <site list file>\n");
