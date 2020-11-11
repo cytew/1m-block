@@ -117,6 +117,7 @@ static u_int32_t print_pkt (struct nfq_data *tb)
 				}
 				string str(tmp);
 				if(siteset.find(str) != siteset.end()) {
+					printf("---------------blocked %s!\n",tmp);
 					netfilter_flag = TRUE;
 					break;
 				}
@@ -151,7 +152,7 @@ int main(int argc, char **argv)
     	site_list_file.open(argv[1]);
 
 	if(!site_list_file.is_open()) {
-		printf("cant open file\n");
+		printf("can't open file\n");
 		return -1;
 	}
 
